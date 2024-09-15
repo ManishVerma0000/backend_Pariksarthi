@@ -17,6 +17,10 @@ const lineMenSchema = new mongoose.Schema({
     type: String,
     default: "",
   },
+  station: {
+    type: String,
+    default: "",
+  },
 });
 
 const lineMen = mongoose.model("lineMen", lineMenSchema);
