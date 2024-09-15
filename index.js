@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const router = require("./routes/routes");
 const app = express();
-const PORT = 5000;
+const PORT = 8009;
 const conn = require("./db/conn");
 conn();
 app.use(express.json());
