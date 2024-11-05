@@ -8,9 +8,9 @@ const {
   findStationNameFromDistrict,
 } = require("../controllers/station");
 const { createLine, lineDetailsStationWise } = require("../controllers/line");
-const{login}=require('../controllers/user')
+const { login } = require("../controllers/user");
 
-router.post('/login',login)
+router.post("/login", login);
 router.get("/lineDetailsStationWise", lineDetailsStationWise);
 router.get("/findStationNameFromDistrict", findStationNameFromDistrict);
 router.get("/lineMenProfile:id", lineMenProfile);
@@ -19,6 +19,5 @@ router.post("/adminLogin", userlogin);
 router.post("/register-lineMen", registerLineMen);
 router.post("/registerStation", registerStation);
 router.post("/createLine", createLine);
-
 
 module.exports = router;
