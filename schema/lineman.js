@@ -21,6 +21,10 @@ const lineMenSchema = new mongoose.Schema({
     type: String,
     default: "",
   },
+  isLineMen: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const lineMen = mongoose.model("lineMen", lineMenSchema);

@@ -20,21 +20,14 @@ const createLine = async (req, res) => {
 const lineDetailsStationWise = async (req, res) => {
   try {
     const matchCriteria = {};
-
-    // Only add district to the match criteria if it exists in the query
     if (req.query.district) {
       matchCriteria.district = req.query.district;
     }
-
-    // Only add station to the match criteria if it exists in the query
     if (req.query.station) {
       matchCriteria.station = req.query.station;
     }
-
     const lineDetails = await line.aggregate([{ $match: matchCriteria }]);
-
     await res.status(200).send(lineDetails);
-    // await res.status(200).send(lineDetails);
   } catch (error) {
     await res.status(400).send({ message: error.message });
   }
